@@ -1,9 +1,10 @@
 // Kelas ini merepresentasikan faktur yang berisi informasi pembelian
-// Kelas Faktur mewarisi dari kelas Barang
+// Kelas Faktur mewarisi dari kelas Barang (Inheritance)
 public class Faktur extends Barang {
     private String noFaktur;
     private int jumlahBeli;
-
+    
+    // Konstruktor Faktur memanggil konstruktor Barang dengan keyword 'super' (Inheritance)
     public Faktur(String noFaktur, String kodeBarang, String namaBarang, double hargaBarang, int jumlahBeli) {
         super(kodeBarang, namaBarang, hargaBarang); // Memanggil konstruktor kelas dasar Barang
         this.noFaktur = noFaktur;
