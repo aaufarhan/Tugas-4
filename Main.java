@@ -24,12 +24,12 @@ public class Main {
             System.out.print("Masukkan Jumlah Beli: ");
             int jumlahBeli = scanner.nextInt();
 
-            // Validasi input
+            // Validasi input jumlah beli (Exception Handling)
             if (jumlahBeli <= 0) {
                 throw new IllegalArgumentException("Jumlah beli harus lebih dari 0.");
             }
 
-            // Membuat objek Faktur
+            // Membuat objek Faktur (Inheritance)
             Faktur faktur = new Faktur(noFaktur, kodeBarang, namaBarang, hargaBarang, jumlahBeli);
 
             // Menampilkan detail pembelian barang
@@ -37,10 +37,10 @@ public class Main {
             faktur.printFaktur();
 
         } catch (IllegalArgumentException e) {
-            // Menangani exception jika jumlah beli tidak valid
+            // Menangani exception jika jumlah beli tidak valid (Exception Handling)
             System.out.println("Error: " + e.getMessage());
         } catch (Exception e) {
-            // Menangani exception lain yang tidak terduga
+            // Menangani exception lain yang tidak terduga (Exception Handling)
             System.out.println("Terjadi kesalahan: " + e.getMessage());
         }
     }
