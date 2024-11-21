@@ -1,24 +1,24 @@
 // Kelas ini merepresentasikan faktur yang berisi informasi pembelian
-public class Faktur {
+// Kelas Faktur mewarisi dari kelas Barang
+public class Faktur extends Barang {
     private String noFaktur;
-    private Barang barang;
     private int jumlahBeli;
 
-    public Faktur(String noFaktur, Barang barang, int jumlahBeli) {
+    public Faktur(String noFaktur, String kodeBarang, String namaBarang, double hargaBarang, int jumlahBeli) {
+        super(kodeBarang, namaBarang, hargaBarang); // Memanggil konstruktor kelas dasar Barang
         this.noFaktur = noFaktur;
-        this.barang = barang;
         this.jumlahBeli = jumlahBeli;
     }
 
     public double hitungTotal() {
-        return barang.getHargaBarang() * jumlahBeli;
+        return getHargaBarang() * jumlahBeli; // Menghitung total harga
     }
 
     public void printFaktur() {
         System.out.println("No Faktur: " + noFaktur);
-        System.out.println("Kode Barang: " + barang.getKodeBarang());
-        System.out.println("Nama Barang: " + barang.getNamaBarang());
-        System.out.println("Harga Barang: Rp " + barang.getHargaBarang());
+        System.out.println("Kode Barang: " + getKodeBarang());
+        System.out.println("Nama Barang: " + getNamaBarang());
+        System.out.println("Harga Barang: Rp " + getHargaBarang());
         System.out.println("Jumlah Beli: " + jumlahBeli);
         System.out.println("Total: Rp " + hitungTotal());
     }
@@ -29,9 +29,5 @@ public class Faktur {
 
     public void setNoFaktur(String noFaktur) {
         this.noFaktur = noFaktur;
-    }
-
-    public void setBarang(Barang barang) {
-        this.barang = barang;
     }
 }
