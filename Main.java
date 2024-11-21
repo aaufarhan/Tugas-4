@@ -29,11 +29,8 @@ public class Main {
                 throw new IllegalArgumentException("Jumlah beli harus lebih dari 0.");
             }
 
-            // Membuat objek Barang
-            Barang barang = new Barang(kodeBarang, namaBarang, hargaBarang);
-
             // Membuat objek Faktur
-            Faktur faktur = new Faktur(noFaktur, barang, jumlahBeli);
+            Faktur faktur = new Faktur(noFaktur, kodeBarang, namaBarang, hargaBarang, jumlahBeli);
 
             // Menampilkan detail pembelian barang
             System.out.println("~~~~Detail Pembelian Barang~~~~");
