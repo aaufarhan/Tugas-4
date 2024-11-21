@@ -17,7 +17,7 @@ public class Main {
             String namaBarang = scanner.nextLine();
 
             // Input Harga Barang
-            System.out.print("Masukkan Harga Barang: ");
+            System.out.print("Masukkan Harga Barang: Rp ");
             double hargaBarang = scanner.nextDouble();
 
             // Input Jumlah Beli
